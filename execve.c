@@ -9,7 +9,7 @@
 int main(void)
 {
 	char *argv[] = {"ls", "-l", NULL};
-	char *envv[] = {"NULL"};
+	char *env[] = {"NULL"};
 
 	printf("Before execve\n");
 	if (execve("/usr/bin/ls", argv, NULL) == -1)
