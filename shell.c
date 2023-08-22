@@ -20,25 +20,25 @@ int main(void)
 		token = strtok(buf, "\t\n");
 		array = malloc(sizeof(char *) * 1024);
 
-	while (token)
-	{
-		array[i] = token;
-		token = strtok(NULL, "\t\n");
-		i++;
-	}
-	array[i] = NULL;
-	child_pid = fork();
+		while (token)
+		{
+			array[i] = token;
+			token = strtok(NULL, "\t\n");
+			i++;
+		}
+		array[i] = NULL;
+		child_pid = fork();
 
-	if (child_pid == 0)
-	{
-		if (execve(array[0], array, NULL) == -1)
-			strerror((char)*"Error");
-	}
-	else
-	{
-		wait(&status);
-	}
-	i = 0;
-	free(array);
+		if (child_pid == 0)
+		{
+			if (execve(array[0], array, NULL) == -1)
+				strerror((char)*"Error");
+		}
+		else
+		{
+			wait(&status);
+		}
+		i = 0;
+		free(array);
 	}
 }
