@@ -2,13 +2,15 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
+#include "shell.h"
 
 /**
  * main - stat
  *
  * Return: Always 0.
  */
-int main(int ac, char **av)
+/* Accessing command-line arguments */
+int main(int argc, char **argv)
 {
 	unsigned int i;
 	struct stat st;
