@@ -4,7 +4,15 @@
 #include <string.h>
 #include "shell.h"
 
-int main(void)
+/**
+ * shell - Executes the shell functionality.
+ *
+ * This function implements a basic shell that provides
+ * It takes user input, executes commands, and displays the output.
+ *
+ * Return: Always 0.
+ */
+int shell(void)
 {
 	size_t buf_size = 0;
 	char *buf = NULL;

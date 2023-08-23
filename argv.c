@@ -11,8 +11,6 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
-
 	while (*argv != NULL)
 	{
 		printf("argv = %s\n", *argv);
