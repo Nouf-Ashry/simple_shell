@@ -157,7 +157,7 @@ void frk_cmd(inf_t *info)
 
 	if (child_pid == -1)
 	{
-		prerror("Error:");
+		pr_error("Error:");
 		return;
 	}
 	if (child_pid == 0)
