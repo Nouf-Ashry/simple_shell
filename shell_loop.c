@@ -164,7 +164,7 @@ void frk_cmd(inf_t *info)
 	{
 		if (execve(info->path, info->argv, gets_environ(info)) == -1)
 		{
-			free_info(info, 1);
+			fre_inf(info, 1);
 			if (errno == EACCES)
 				exit(126);
 			exit(1);
