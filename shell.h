@@ -124,8 +124,31 @@ typedef struct passinf
 
 
 #define INFO_INIT \
+<<<<<<< HEAD
+	{ \
+		NULL,  /* field1 */ \
+		NULL,  /* field2 */ \
+		NULL,  /* field3 */ \
+		0,     /* field4 */ \
+		0,     /* field5 */ \
+		0,     /* field6 */ \
+		0,     /* field7 */ \
+		NULL,  /* field8 */ \
+		NULL,  /* field9 */ \
+		NULL,  /* field10 */ \
+		NULL,  /* field11 */ \
+		NULL,  /* field12 */ \
+		0,     /* field13 */ \
+		0,     /* field14 */ \
+		NULL,  /* field15 */ \
+		0,     /* field16 */ \
+		0,     /* field17 */ \
+		0      /* field18 */ \
+}
+=======
 {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL,\
 	0, 0, 0}
+>>>>>>> 4653d46f8c57ade628ce7d4f363e3775ee14f975
 
 /**
  * struct builtin - contains a builtin str.
