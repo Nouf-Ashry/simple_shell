@@ -10,6 +10,7 @@
 void _erputs(char *str)
 {
 	int i = 0;
+
 	if (!str)
 		return;
 	while (str[i] != '\0')
@@ -31,6 +32,7 @@ int _erputchar(char c)
 {
 	static int i;
 	static char buf[WRITE_BUF_SIZE];
+
 	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
 	{
 		write(2, buf, i);
@@ -55,6 +57,7 @@ int _eputfd(char v, int fd)
 {
 	static int i;
 	static char buf[WRITE_BUF_SIZE];
+
 	if (v == BUF_FLUSH || i >= WRITE_BUF_SIZE)
 	{
 		write(fd, buf, i);
@@ -77,6 +80,7 @@ int _eputfd(char v, int fd)
 int _eputsfd(char *str, int fd)
 {
 	int i = 0;
+
 	if (!str)
 		return (0);
 	while (*str)
