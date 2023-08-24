@@ -285,7 +285,7 @@ void fre_inf(inf_t *, int);
 
 char *_getsenv(inf_t *, const char *);
 
-int _myineenv(inf_t *);
+int _mineenv(inf_t *);
 
 int _minesetenv(inf_t *);
 
