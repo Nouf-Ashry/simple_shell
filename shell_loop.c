@@ -67,7 +67,7 @@ int f_builtin(inf_t *info)
 	builtin_tab builtintbl[] = {
 
 		{"exit", _mineexit},
-		{"env", _mineenv},
+		{"env", _myineenv},
 		{"help", _minehelp},
 		{"history", _minehistory},
 		{"setenv", _minesetenv},
