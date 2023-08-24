@@ -125,8 +125,8 @@ typedef struct passinf
 
 #define INFO_INIT \
 
-{NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL,
-	NULL, NULL, 0, 0, NULL, 0, 0, 0}
+{NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL,\
+	0, 0, 0}
 
 /**
  * struct builtin - contains a builtin str.
