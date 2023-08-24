@@ -21,10 +21,10 @@ int hash(inf_t *info, char **av)
 		if (interactives(info))
 			_puts("$ ");
 		_erputchar(BUF_FLUSH);
-		u = get_input(info);
+		u = gets_input(info);
 		if (u != -1)
 		{
-			sets_info(info, av);
+			sets_inf(info, av);
 			builtin_rt = f_builtin(info);
 			if (builtin_rt == -1)
 				fnd_cmd(info);
@@ -32,7 +32,7 @@ int hash(inf_t *info, char **av)
 		else if (interactives(info))
 			_putchar('\n');
 
-		free_info(info, 0);
+		fre_inf(info, 0);
 	}
 	write_his(info);
 	fre_inf(info, 1);
