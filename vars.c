@@ -129,7 +129,7 @@ int repl_var(inf_t *info)
 			_strsdup(_strnchr(node->str, '=') + 1));
 			continue;
 		}
-		repl_str(&info->argv[i], _strdup(""));
+		repl_str(&info->argv[i], _strsdup(""));
 	}
 	return (0);
 }
