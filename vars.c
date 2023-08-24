@@ -101,7 +101,7 @@ int repl_alias(inf_t *info)
 * @info: struct
 * Return: 1 if replaced, 0 otherwise
 */
-int repl_var(info_t *info)
+int repl_var(inf_t *info)
 {
 	int i = 0;
 	list_t *node;
