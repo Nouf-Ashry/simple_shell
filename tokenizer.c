@@ -76,7 +76,7 @@ char **strstowar(char *str, char d)
 				i++;
 			k = 0;
 			while (str[i + k] != d && str[i + k] && str[i + k] != d)
-					k++;
+				k++;
 			s[j] = malloc((k + 1) * sizeof(char));
 			if (!s[j])
 			{
