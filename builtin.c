@@ -33,7 +33,7 @@ int _mineexit(inf_t *info)
 * @info: the struct
 * Return: Always 0
 */
-int _minecd(info_t *info)
+int _minecd(inf_t *info)
 {
 	char *s, *dir, buffer[1024];
 	int chdir_rt;
