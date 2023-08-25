@@ -20,16 +20,16 @@ size_t lst_len(const list_t *h)
 }
 
 /**
-* lst_to_strs - returns an array of strings of the list->str
+* lst_tostrs - returns an array of strings of the list->str
 * @head: pointer to first node
 *
 * Return: array of strings
 */
 
-char **lst_to_strs(list_t *head)
+char **lst_tostrs(list_t *head)
 {
 	list_t *node = head;
-	size_t i = list_len(head), j;
+	size_t i = lst_len(head), j;
 	char **strs;
 	char *str;
 
