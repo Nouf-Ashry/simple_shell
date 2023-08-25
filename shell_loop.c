@@ -9,7 +9,6 @@
 */
 
 int hash(inf_t *info, char **av)
-
 {
 
 	ssize_t u = 0;
@@ -31,14 +30,12 @@ int hash(inf_t *info, char **av)
 		}
 		else if (interactives(info))
 			_putchar('\n');
-
 		fre_inf(info, 0);
 	}
 	write_his(info);
 	fre_inf(info, 1);
 	if (!interactives(info) && info->status)
 		exit(info->status);
-
 	if (builtin_rt == -2)
 	{
 		if (info->err_num == -1)
@@ -48,7 +45,6 @@ int hash(inf_t *info, char **av)
 		}
 	}
 	return (builtin_rt);
-
 }
 
 /**
@@ -61,13 +57,10 @@ int hash(inf_t *info, char **av)
 */
 
 int f_builtin(inf_t *info)
-
 {
-
 	int i, built_in_rt = -1;
 
 	builtin_tab builtintbl[] = {
-
 		{"exit", _mineexit},
 		{"env", _myineenv},
 		{"help", _minehelp},
@@ -77,21 +70,16 @@ int f_builtin(inf_t *info)
 		{"cd", _minecd},
 		{"alias", _minealias},
 		{NULL, NULL}
-
 	};
-
 	for (i = 0; builtintbl[i].type; i++)
 		if (_strcmp(info->argv[0], builtintbl[i].type) == 0)
 		{
 			info->line_count++;
 			built_in_rt = builtintbl[i].func(info);
 			break;
-
 		}
 	return (built_in_rt);
-
 }
-
 
 /**
 * fnd_cmd - finds a command in PATH
@@ -101,16 +89,13 @@ int f_builtin(inf_t *info)
 */
 
 void fnd_cmd(inf_t *info)
-
 {
-
 	char *path = NULL;
 	int i, k;
 
 	info->path = info->argv[0];
 	if (info->linecount_flag == 1)
 	{
-
 		info->line_count++;
 		info->linecount_flag = 0;
 	}
@@ -122,7 +107,6 @@ void fnd_cmd(inf_t *info)
 			return;
 	}
 	path = fnd_path(info, _getsenv(info, "PATH="), info->argv[0]);
-
 	if (path)
 	{
 		info->path = path;
@@ -136,13 +120,10 @@ void fnd_cmd(inf_t *info)
 			frk_cmd(info);
 		else if (*(info->arg) != '\n')
 		{
-
 			info->status = 127;
 			pr_error(info, "not found\n");
 		}
-
 	}
-
 }
 
 /**
@@ -151,15 +132,13 @@ void fnd_cmd(inf_t *info)
 *
 * Return: void
 */
-void frk_cmd(inf_t *info)
+void frk_cmd(inf_t* info)
 {
 	pid_t child_pid;
-
 	child_pid = fork();
-
 	if (child_pid == -1)
 	{
-		pr_error(inf_t, "Error:");		
+		pr_error(info, "Error:");
 		return;
 	}
 	if (child_pid == 0)
