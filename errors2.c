@@ -38,7 +38,7 @@ int _erratoi(char *s)
  */
 void pr_error(inf_t *info, char *estr)
 {
-	_erputs(info->fname);
+	_erputs(info->finame);
 	_erputs(": ");
 	pr_d(info->line_count, STDERR_FILENO);
 	_erputs(": ");
