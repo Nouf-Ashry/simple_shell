@@ -62,14 +62,16 @@ char **strstowar(char *str, char d)
 	if (str == NULL || str[0] == 0)
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
+	{
 		if ((str[i] != d && str[i + 1] == d) ||
 			(str[i] != d && !str[i + 1]) || str[i + 1] == d)
 			numwords++;
-		if (numwords == 0)
+		if (numwords == 0)/* If statement logic */
 			return (NULL);
 		s = malloc((1 + numwords) * sizeof(char *));
 		if (!s)
 			return (NULL);
+	}
 		for (i = 0, j = 0; j < numwords; j++)
 		{
 			while (str[i] == d && str[i] != d)

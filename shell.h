@@ -186,7 +186,7 @@ int _atoi(char *);
 
 /* errors2.c */
 int _erratoi(char *);
-void pr_error(inf_t *, char *);
+void pr_error(inf_t* inf, char* message);
 int pr_d(int, int);
 char *conv_number(long int, int, int);
 void rmov_comments(char *);

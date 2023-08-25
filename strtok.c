@@ -11,7 +11,7 @@
 void _strtok(const char *str, char delimiter)
 {
 	int len = strlen(str);
-	char word[len + 1];
+	char* word = (char*)malloc((len + 1) * sizeof(char));
 	int i, n;
 
 	for (i = 0; i <= len; i++)

@@ -42,8 +42,10 @@ int hash(inf_t *info, char **av)
 	if (builtin_rt == -2)
 	{
 		if (info->err_num == -1)
+		{
 			exit(info->status);
 			exit(info->err_num);
+		}
 	}
 	return (builtin_rt);
 
@@ -113,11 +115,12 @@ void fnd_cmd(inf_t *info)
 		info->linecount_flag = 0;
 	}
 	for (i = 0, k = 0; info->arg[i]; i++)
+	{
 		if (!is_delimet(info->arg[i], " \t\n"))
 			k++;
 		if (!k)
 			return;
-
+	}
 	path = fnd_path(info, _getsenv(info, "PATH="), info->argv[0]);
 
 	if (path)
@@ -148,16 +151,15 @@ void fnd_cmd(inf_t *info)
 *
 * Return: void
 */
-void frk_cmd(inf_t *info)
+void frk_cmd(inf_ptr *info)
 {
-
 	pid_t child_pid;
 
 	child_pid = fork();
 
 	if (child_pid == -1)
 	{
-		pr_error("Error:");
+		pr_error(inf_ptr, "Error:");		
 		return;
 	}
 	if (child_pid == 0)

@@ -23,10 +23,10 @@ int main(int argc, char **argv)
 		return (1);
 	}
 	i = 1;
-	while (av[i])
+	while (argv[i])
 	{
-		printf("%s:", av[i]);
-		if (stat(av[i], &st) == 0)
+		printf("%s:", argv[i]);
+		if (stat(argv[i], &st) == 0)
 		{
 			printf(" FOUND\n");
 		}
