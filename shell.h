@@ -143,7 +143,7 @@ char *fnd_path(inf_t *, char *, char *);
 /* errors.c */
 void _erputs(char *);
 int _erputchar(char);
-int _eputfd(char c, int fd);
+int _eputfd(char v, int fd);
 int _eputsfd(char *str, int fd);
 
 
