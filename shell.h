@@ -40,7 +40,6 @@ extern char **environ;
  * @str: string
  * @next: pointer
  */
-
 typedef struct lists
 {
 	int num;
