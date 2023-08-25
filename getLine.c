@@ -17,7 +17,7 @@ ssize_t input_buf(inf_t *info, char **buf, size_t *len)
 
 	if (!*len)
 	{
-		
+
 		free(*buf);
 		*buf = NULL;
 		signal(SIGINT, sigintHandler);

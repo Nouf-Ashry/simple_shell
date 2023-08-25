@@ -10,7 +10,6 @@
 
 int hash(inf_t *info, char **av)
 {
-
 	ssize_t u = 0;
 	int builtin_rt = 0;
 
@@ -62,7 +61,7 @@ int f_builtin(inf_t *info)
 
 	builtin_tab builtintbl[] = {
 		{"exit", _mineexit},
-		{"env", _myineenv},
+		{"env", _mineenv},
 		{"help", _minehelp},
 		{"history", _minehistory},
 		{"setenv", _minesetenv},
@@ -87,7 +86,6 @@ int f_builtin(inf_t *info)
 *
 * Return: void
 */
-
 void fnd_cmd(inf_t *info)
 {
 	char *path = NULL;
@@ -132,10 +130,12 @@ void fnd_cmd(inf_t *info)
 *
 * Return: void
 */
-void frk_cmd(inf_t* info)
+void frk_cmd(inf_t *info)
 {
 	pid_t child_pid;
+
 	child_pid = fork();
+
 	if (child_pid == -1)
 	{
 		pr_error(info, "Error:");

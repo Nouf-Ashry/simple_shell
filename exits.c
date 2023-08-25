@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- **_strspy - copies a string
- *@dest: the destination string to be copied to
- *@src: the source string
- *@n: the amount of characters to be copied
- *Return: the concatenated string
+ * *_strscpy - copies a string
+ * @dest: the destination string to be copied to
+ * @src: the source string
+ * @n: the amount of characters to be copied
+ * Return: the concatenated string
  */
 
 char *_strscpy(char *dest, char *src, int n)
