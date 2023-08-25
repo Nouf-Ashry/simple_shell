@@ -22,7 +22,7 @@ char **gets_environ(inf_t *info)
 *  Return: 1 on delete, 0
 */
 
-int _unsetsenv(info_t *info, char *var)
+int _unsetsenv(inf_t *info, char *var)
 {
 	list_t *node = info->env;
 	size_t i = 0;
