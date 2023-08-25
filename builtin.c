@@ -46,7 +46,7 @@ int _minecd(inf_t *info)
 		dir = _getsenv(info, "HOME=");
 		if (!dir)
 			chdir_rt =
-				chdir((dir = _getenv(info, "PWD=")) ? dir : "/");
+				chdir((dir = _getsenv(info, "PWD=")) ? dir : "/");
 		else
 			chdir_rt = chdir(dir);
 	}

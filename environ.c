@@ -7,7 +7,7 @@
  * Return: Always 0
  */
 
-int _mineenv(info_t *info)
+int _mineenv(inf_t *info)
 {
 	pr_lst_str(info->env);
 	return (0);
