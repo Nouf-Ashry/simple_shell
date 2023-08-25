@@ -151,7 +151,7 @@ void fnd_cmd(inf_t *info)
 *
 * Return: void
 */
-void frk_cmd(inf_ptr *info)
+void frk_cmd(inf_t *info)
 {
 	pid_t child_pid;
 
@@ -159,7 +159,7 @@ void frk_cmd(inf_ptr *info)
 
 	if (child_pid == -1)
 	{
-		pr_error(inf_ptr, "Error:");		
+		pr_error(inf_t, "Error:");		
 		return;
 	}
 	if (child_pid == 0)
