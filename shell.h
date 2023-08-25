@@ -228,7 +228,7 @@ char *get_his_fl(inf_t *info);
 int write_his(inf_t *info);
 int red_his(inf_t *info);
 int buld_his_lst(inf_t *info, char *buf, int linecount);
-int renumb_history(inf_t *info);
+int renum_history(inf_t *info);
 
 /* lists.c */
 list_t *add_node(list_t **, const char *, int);

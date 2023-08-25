@@ -9,7 +9,7 @@ char **gets_environ(inf_t *info)
 {
 	if (!info->environ || info->env_changed)
 	{
-		info->environ = lst_to_str(info->env);
+		info->environ = lst_tostrs(info->env);
 		info->env_changed = 0;
 	}
 	return (info->environ);

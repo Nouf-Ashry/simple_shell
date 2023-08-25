@@ -10,22 +10,22 @@
 * Return: bytes read
 */
 
-ssize_t input_buf(info_t *info, char **buf, size_t *len)
+ssize_t input_buf(inf_t *info, char **buf, size_t *len)
 {
 	ssize_t r = 0;
 	size_t len_p = 0;
 
 	if (!*len)
 	{
-		/*bfre((void **)info->cmd_buf);*/
+		
 		free(*buf);
 		*buf = NULL;
 		signal(SIGINT, sigintHandler);
 
 		#if USE_GETLINE
-			r = getline(buf, &len_p, stdin);
+			r = _getsline(buf, &len_p, stdin);
 		#else
-			r = _getline(info, buf, &len_p);
+			r = _getsline(info, buf, &len_p);
 
 		#endif
 		if (r > 0)

@@ -7,7 +7,7 @@
 * Return: v
 */
 
-char *get_his_fl(info_t *info)
+char *get_his_fl(inf_t *info)
 {
 	char *buf, *dir;
 
