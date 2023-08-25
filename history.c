@@ -33,7 +33,7 @@ char *get_his_fl(info_t *info)
 int write_his(inf_t *info)
 {
 	ssize_t fd;
-	char *filename = get_his_fle(info);
+	char *filename = get_his_fl(info);
 	list_t *node = NULL;
 
 	if (!filename)
@@ -64,7 +64,7 @@ int red_his(inf_t *info)
 	int i, last = 0, linecount = 0;
 	ssize_t fd, rdlen, fsize = 0;
 	struct stat st;
-	char *buf = NULL, *filename = get_his_fle(info);
+	char *buf = NULL, *filename = get_his_fl(info);
 
 	if (!filename)
 		return (0);
@@ -96,7 +96,7 @@ int red_his(inf_t *info)
 	free(buf);
 	info->histcount = linecount;
 	while (info->histcount-- >= HIST_MAX)
-		dele_node_at_ndex(&(info->history), 0);
+		del_node_at_ndex(&(info->history), 0);
 	renum_history(info);
 	return (info->histcount);
 }
@@ -129,7 +129,7 @@ int buld_his_lst(inf_t *info, char *buf, int linecount)
 * Return: the new histcount
 */
 
-int renum_history(info_t *info)
+int renum_history(inf_t *info)
 {
 	list_t *node = info->history;
 	int i = 0;
